@@ -3,6 +3,7 @@ let app = express();
 let mongoose = require('mongoose');
 let config = require('./config');
 let setupController = require('./controller/setupController');
+let apiController = require('./controller/apiController');
 
 let port = process.env.PORT || 4000;
 
@@ -21,5 +22,6 @@ mongoose.connect(
     }
 );
 setupController(app);
+apiController(app);
 
 app.listen(port);

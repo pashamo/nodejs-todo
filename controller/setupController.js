@@ -1,25 +1,25 @@
 let Todos = require('../models/todoModel');
 
-module.exports = (app) => {
+module.exports = app => {
     
     app.get('/api/setupTodos', (req, res) => {
 
         //seed database
         let starterTodos = [
             {
-                username: 'test1',
+                username: 'test',
                 todo: 'Buy Eggs',
                 isDone: false,
                 hadAttachment: false
             },
             {
-                username: 'test1',
+                username: 'test',
                 todo: 'Clean Toilet',
                 isDone: false,
                 hadAttachment: false
             },
             {
-                username: 'test2',
+                username: 'test',
                 todo: 'Learn Node',
                 isDone: false,
                 hadAttachment: false
